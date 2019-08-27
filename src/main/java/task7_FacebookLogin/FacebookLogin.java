@@ -9,14 +9,14 @@ import java.util.concurrent.TimeUnit;
 public class FacebookLogin {
 
     public static void main(String[] args) {
-        Test1();
+        facebookLogin();
     }
 
-    public static void Test1() {
+    public static void facebookLogin() {
         System.setProperty("webdriver.chrome.driver", "drivers\\chromedriver.exe");
         WebDriver driver = new org.openqa.selenium.chrome.ChromeDriver();
         driver.get("https://www.google.com/");
-        WebElement searchField = driver.findElement(By.xpath("//input[@name= 'q' ]"));
+        WebElement searchField = driver.findElement(By.xpath("//input[@name='q']"));
         searchField.sendKeys("facebook");
         driver.manage().timeouts().implicitlyWait(1000, TimeUnit.MILLISECONDS);
         WebElement searchButton = driver.findElement(By.xpath("//div[@class='VlcLAe']//input[@name='btnK']"));
