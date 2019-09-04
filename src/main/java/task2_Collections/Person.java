@@ -1,14 +1,16 @@
 package task2_Collections;
 
-public class Person {
-    private String lastName;
-    private String firstName;
-    private String surname;
-    private int birthday;
-    private String address;
-    private int phone;
+import java.util.Date;
 
-    public Person(String lastName, String firstName, String surname, int birthday, String address, int phone) {
+public class Person {
+    protected String lastName;
+    protected String firstName;
+    protected String surname;
+    protected Date birthday;
+    protected String address;
+    protected String phone;
+
+    public Person(String lastName, String firstName, String surname, Date birthday, String address, String phone) {
         this.lastName = lastName;
         this.firstName = firstName;
         this.surname = surname;
@@ -17,7 +19,7 @@ public class Person {
         this.phone = phone;
     }
 
-    public Person(String lastName, String firstName, int birthday) {
+    public Person(String lastName, String firstName, Date birthday) {
         this.lastName = lastName;
         this.firstName = firstName;
         this.birthday = birthday;
@@ -31,15 +33,15 @@ public class Person {
         return firstName;
     }
 
-    public int getBirthday() {
+    public Date getBirthday() {
         return birthday;
     }
 
     @Override
     public String toString() {
         return "Person{" +
-                "lastName='" + lastName + '\'' +
-                ", firstName='" + firstName + '\'' +
+                "lastName='" + lastName + "\'" +
+                ", firstName='" + firstName + "\'" +
                 ", birthday=" + birthday +
                 '}';
     }

@@ -1,6 +1,6 @@
 package task2_Collections;
 
-import java.util.ArrayList;
+import java.util.Date;
 
 public class Student extends Person {
     private int id;
@@ -8,7 +8,7 @@ public class Student extends Person {
     private int course;
     private String group;
 
-    public Student(String lastName, String firstName, int birthday, int id, String faculty, int course, String group) {
+    public Student(String lastName, String firstName, Date birthday, int id, String faculty, int course, String group) {
         super(lastName, firstName, birthday);
         this.id = id;
         this.faculty = faculty;
@@ -31,10 +31,13 @@ public class Student extends Person {
     @Override
     public String toString() {
         return "Student{" +
-                "id=" + id +
-                ", faculty='" + faculty + '\'' +
+                "lastName='" + lastName + "\'" +
+                ", firstName='" + firstName + "\'" +
+                ", birthday='" + birthday + "\'" +
+                ", id=" + id +
+                ", faculty='" + faculty + "\'" +
                 ", course=" + course +
-                ", group='" + group + '\'' +
+                ", group='" + group + "\'" +
                 '}';
     }
 }
