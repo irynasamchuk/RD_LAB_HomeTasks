@@ -1,4 +1,9 @@
-package task3_Enums;
+package task3.enums;
+
+import task3.enums.Courses;
+import task3.enums.Faculties;
+import task3.enums.Groups;
+import task3.enums.Student;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;

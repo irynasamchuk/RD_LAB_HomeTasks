@@ -1,4 +1,4 @@
-package task3_Enums;
+package task3.enums;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
