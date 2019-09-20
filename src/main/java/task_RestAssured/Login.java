@@ -15,8 +15,7 @@ public class Login {
             .setBasePath("api/login")
             .build();
 
-    @Test
-            //(description = "This test is for 'LOGIN - SUCCESSFUL' endpoint")
+    @Test(description = "This test is for 'LOGIN - SUCCESSFUL' endpoint")
     public void loginSuccessfull() {
         String user = "{\"email\" : \"eve.holt@reqres.in\", \"password\": \"cityslicka\"}";
         given()
