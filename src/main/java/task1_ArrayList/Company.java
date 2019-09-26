@@ -20,7 +20,7 @@ public class Company {
                 System.out.println("Yes, company has the employee with name: " + firstName + ".");
         }
     }
-
+    
     public void getEmployeeByLastName(String lastName) {
         for (Person employee : employees) {
             if (employee.getLastName().contains(lastName))
