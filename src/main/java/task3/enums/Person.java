@@ -1,4 +1,4 @@
-package task2_Collections;
+package task3.enums;
 
 import java.util.Date;
 

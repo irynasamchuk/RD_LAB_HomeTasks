@@ -1,4 +1,9 @@
-package task2_Collections;
+package task3.enums;
+
+import task3.enums.Courses;
+import task3.enums.Faculties;
+import task3.enums.Groups;
+import task3.enums.Student;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -14,7 +19,11 @@ public class University {
         this.students = students;
     }
 
-    public List<Student> getStudentsByFaculty(String faculty) {
+    public List<Student> getStudents() {
+        return students;
+    }
+
+    public List<Student> getStudentsByFaculty(Faculties faculty) {
         List<Student> tempList = new ArrayList<>();
         for (Student student : students)
             if (student.getFaculty().equals(faculty)) {
@@ -23,10 +32,10 @@ public class University {
         return tempList;
     }
 
-    public List<Student> getStudentsByCourseFaculty(String faculty, int course) {
+    public List<Student> getStudentsByCourseFaculty(Faculties faculty, Courses course) {
         List<Student> tempList = new ArrayList<>();
         for (Student student : students)
-            if (student.getFaculty().equals(faculty) && student.getCourse() == course) {
+            if(student.getFaculty().equals(faculty) && student.getCourse().equals(course)){
                 tempList.add(student);
             }
         return tempList;
@@ -44,7 +53,7 @@ public class University {
         return tempList;
     }
 
-    public List<Student> getStudentsByGroup(String group) {
+    public List<Student> getStudentsByGroup(Groups group) {
         List<Student> tempList = new ArrayList<>();
         for (Student student : students)
             if (student.getGroup().equals(group))
