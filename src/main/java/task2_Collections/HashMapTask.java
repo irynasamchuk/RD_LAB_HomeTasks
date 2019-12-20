@@ -16,7 +16,7 @@ public class HashMapTask {
         for(String i : myHashMap.values()){
             if(tempHashMap.keySet().contains(i)){
                 tempHashMap.put(i, tempHashMap.get(i)+1);
-            }else
+            } else
                 tempHashMap.put(i,1);
         }
         return tempHashMap;
